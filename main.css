@@ -1,50 +1,87 @@
 /* main.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to the entire body */
+}
+
+#length-label {
+    display: inline-block;
+    width: 100px; /* Adjust the width as needed */
+    text-align: left; /* Align the text*/
+}
+
 .password-container {
     border: 2px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
-    display: inline-block;
+    padding: 5px;
+    display: flex;
     position: relative;
-    min-width: 500px; /* Adjust width to accommodate maximum character limit */
+    min-width: flex;
+    max-width: 700px;
+    white-space: nowrap; /* Prevent line breaks in the password */
+    overflow: hidden; /* Hide any overflowing content */   
 }
 
 #generated-password {
-    min-width: 500px; /* Adjust as needed */
+    min-width: 320px; /* Adjust as needed */
+    max-width: 100%;
     display: inline-block;
-    margin-left: 20px; /* Add space between refresh button and password */
-    text-align: center; /* Center the password text */
+    text-align: left; /* Center the password text */
+    min-height: 24px;
+    height: flex;
 }
 
-.refresh-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    position: absolute; /* Position the icon relative to its container */
-    top: 50%; /* Align the icon vertically at the center */
-    left: 50%; /* Align the icon horizontally at the center */
-    transform: translate(0% , -50%); /* Adjust to center the icon */
-    z-index: 1; /* Ensure the icon is above other elements */
+.generate-button {
+    min-width: flex; /* Adjust width to match password box */
+    width: 180px;
+    height: 50px; /* Automatically adjust height */
+    margin-top: 32px; /* Add some space between the password box and the button */
+    padding: 10px; /* Add padding for better appearance */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 400; /* Use Regular 400 weight */
+    color: white; /* Set text color to white */
+    background-color: #007bff; /* Set background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Apply border radius */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+    justify-content: center;
 }
 
-.refresh-button {
-    position: absolute;
-    top: 50%;
-    left: 10px; /* Position on the left side */
-    transform: translateY(-50%);
-    cursor: pointer;
-    transition: transform 0.3s ease, scale 0.3s ease; /* Add transition */
-    z-index: 1; /* Ensure refresh button is above the pseudo-element */
+.generate-button:hover {
+    background-color: #0056b3; /* Darken background color on hover */
 }
 
-.refresh-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -5px; /* Adjust to fit the button */
-    width: 30px; /* Adjust to fit the button */
-    height: 30px; /* Adjust to fit the button */
-    background-color: #ccc; /* Same color as the box around the password */
-    border-radius: 5px;
-    transform: translateY(-50%);
-    z-index: -1; /* Ensure the box is behind the icon */
+.copy-button {
+    min-width: flex; /* Adjust width to match password box */
+    width: 180px;
+    height: 50px; /* Automatically adjust height */
+    margin-top: 5px; /* Add some space between the password box and the button */
+    padding: 10px; /* Add padding for better appearance */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 400; /* Use Regular 400 weight */
+    color: white; /* Set text color to white */
+    background-color: #007bff; /* Set background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Apply border radius */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+    justify-content: center;
+}
+
+.copy-button:hover {
+    background-color: #0056b3; /* Darken background color on hover */
+}
+
+@keyframes copiedAnimation {
+    0% { background-color: rgb(95, 226, 95); } /* Start with the original button color */
+    100% { background-color: #007bff; } /* Return to the original button color */
+}
+
+.copied {
+    animation: copiedAnimation 2s ease forwards;
 }
