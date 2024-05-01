@@ -1,5 +1,11 @@
 /* main.css */
 
+#length-label {
+    display: inline-block;
+    width: 100px; /* Adjust the width as needed */
+    text-align: left; /* Align the text*/
+}
+
 .password-container {
     border: 2px solid #ccc;
     border-radius: 5px;
