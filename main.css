@@ -4,43 +4,44 @@
 
 body {
     font-family: 'Poppins', sans-serif; /* Apply Poppins font to the entire body */
+    font-size: 150%;
 }
 
 #length-label {
     display: inline-block;
-    width: 100px; /* Adjust the width as needed */
+    width: 150px; /* Adjust the width as needed */
     text-align: left; /* Align the text*/
 }
 
 .password-container {
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
+    border: 3px solid #ccc;
+    border-radius: 7.5px;
+    padding: 7.5px;
     display: flex;
     position: relative;
     min-width: flex;
-    max-width: 700px;
+    max-width: 750px;
     white-space: nowrap; /* Prevent line breaks in the password */
     overflow: hidden; /* Hide any overflowing content */   
 }
 
 #generated-password {
-    min-width: 320px; /* Adjust as needed */
+    min-width: 480px; /* Adjust as needed */
     max-width: 100%;
     display: inline-block;
     text-align: left; /* Center the password text */
-    min-height: 24px;
+    min-height: 36px;
     height: flex;
 }
 
 .generate-button {
     min-width: flex; /* Adjust width to match password box */
-    width: 180px;
-    height: 50px; /* Automatically adjust height */
-    margin-top: 32px; /* Add some space between the password box and the button */
-    padding: 10px; /* Add padding for better appearance */
+    width: 270px;
+    height: 75px; /* Automatically adjust height */
+    margin-top: 48px; /* Add some space between the password box and the button */
+    padding: 15px; /* Add padding for better appearance */
     font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-    font-size: 16px; /* Adjust font size */
+    font-size: 24px; /* Adjust font size */
     font-weight: 400; /* Use Regular 400 weight */
     color: white; /* Set text color to white */
     background-color: #007bff; /* Set background color */
@@ -57,12 +58,12 @@ body {
 
 .copy-button {
     min-width: flex; /* Adjust width to match password box */
-    width: 180px;
-    height: 50px; /* Automatically adjust height */
+    width: 270px;
+    height: 75px; /* Automatically adjust height */
     margin-top: 5px; /* Add some space between the password box and the button */
-    padding: 10px; /* Add padding for better appearance */
+    padding: 15px; /* Add padding for better appearance */
     font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-    font-size: 16px; /* Adjust font size */
+    font-size: 24px; /* Adjust font size */
     font-weight: 400; /* Use Regular 400 weight */
     color: white; /* Set text color to white */
     background-color: #007bff; /* Set background color */
