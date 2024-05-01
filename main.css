@@ -5,6 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif; /* Apply Poppins font to the entire body */
     font-size: 150%;
+    margin-left: 33px;
 }
 
 #length-label {
