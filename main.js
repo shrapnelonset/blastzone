@@ -2,6 +2,19 @@ function updateSliderValue(value) {
     document.getElementById("slider-value").textContent = value;
 }
 
+// Check if the device is a desktop or not
+function isDesktop() {
+    // Use a media query to detect if the device is a desktop
+    return window.matchMedia("(hover: hover)").matches;
+}
+
+// Add hover class for desktop devices
+function addHoverClass() {
+    if (isDesktop()) {
+        document.getElementById("generate-button").classList.add("hover-effect");
+    }
+}
+
 function generatePassword() {
     var passwordSpan = document.getElementById("generated-password");
     var passwordLength = document.getElementById("length").value;
