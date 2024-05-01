@@ -7,7 +7,7 @@
 <body>
     <h1>Password Generator</h1>
     <form id="password-form" action="/generate" method="post">
-        <label for="length">Length (<span id="slider-value">16</span>)</label><br>
+        <label for="length">Length (<span id="slider-value">16</span>):</label><br>
         <input type="range" id="length" name="length" min="4" max="50" value="16" oninput="updateSliderValue(this.value)"><br><br>
         
         <input type="checkbox" id="letters" name="letters" checked>
@@ -21,10 +21,10 @@
         
         <div class="password-container" id="password-container">
             <span id="generated-password"></span>
-            <span class="refresh-button" onclick="generatePassword()">
-                <img src="assets\refresh_icon.svg" alt="Refresh Icon" class="refresh-icon">
-            </span>
         </div>
+        
+        <button type="button" class="generate-button" onclick="generatePassword()">Generate Password</button>
+        <button type="button" id="copy-password-button" class="copy-button" onclick="copyPassword()">Copy Password</button>
     </form>
 
     <script src="main.js"></script> <!-- Include the JavaScript file -->
